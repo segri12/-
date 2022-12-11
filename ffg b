@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            int GrandmothersPolyclinic; //Бабушки в поликлинике
+            int FixedTime = 10;  //Фиксированное время
+            int timeVsego;
+            int chas;
+            int min;
+
+            Console.Write("Введите кол - во людей в очереди -");
+            GrandmothersPolyclinic = Convert.ToInt32(Console.ReadLine());
+
+            timeVsego = GrandmothersPolyclinic * FixedTime;
+            chas = timeVsego / 60;
+            min = timeVsego % 60;
+
+            Console.WriteLine($"Вы должны отстоять в очереди {chas} часса и {min} минут");
+            Console.ReadLine();
+        }
+    }
+}
